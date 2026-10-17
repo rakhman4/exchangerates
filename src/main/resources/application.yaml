@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: exchangerates
+  datasource:
+    url: jdbc:postgresql://localhost:5433/exchangerates
+    username: postgres
+    password: postgres
