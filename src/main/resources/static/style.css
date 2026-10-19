@@ -1,0 +1,153 @@
+:root {
+    --night: #12343b;
+    --blue: #2d545e;
+    --sand: #e1b382;
+    --sand-shadow: #c89666;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: whitesmoke;
+    color: var(--night);
+    font-family: Arial;
+    line-height: 1.5;
+}
+
+.container {
+    width: calc(100% - 32px);
+    max-width: 960px;
+    margin: 32px auto;
+    padding: 24px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 13px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+h2 {
+    margin: 20px 0;
+    font-size: 1.5rem;
+}
+
+#status {
+    margin: 20px 0;
+    color: var(--blue);
+}
+
+#status:empty {
+    display: none;
+}
+
+button {
+    min-height: 44px;
+    padding: 10px 16px;
+    border: 1px solid var(--blue);
+    border-radius: 6px;
+    background: var(--blue);
+    color: white;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--night);
+}
+
+.table-wrapper {
+    margin-top: 16px;
+    overflow-x: auto;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px 16px;
+    border-bottom: 1px solid lightgray;
+    text-align: left;
+}
+
+th {
+    background: var(--blue);
+    color: white;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+tbody tr:hover {
+    background: whitesmoke;
+}
+
+tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+td button {
+    min-width: 64px;
+    padding: 6px 12px;
+    border-color: var(--sand-shadow);
+    background: var(--sand);
+    color: var(--night);
+}
+
+td button:hover {
+    background: var(--sand-shadow);
+}
+
+#rate-detail {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 12px 24px;
+    margin: 20px 0 0;
+}
+
+#rate-detail dt {
+    color: var(--blue);
+    font-weight: 600;
+}
+
+#rate-detail dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: calc(100% - 24px);
+        margin: 12px auto;
+        padding: 16px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    #rate-detail {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    #rate-detail dd {
+        margin-bottom: 12px;
+    }
+}

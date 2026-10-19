@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kurzovní lístek</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Kurzovní lístek České spořitelny</h1>
+
+        <p id="status" role="status"></p>
+
+        <section id="list-view" aria-label="Přehled kurzů">
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                    <tr>
+                        <th scope="col">Měna</th>
+                        <th scope="col">Název</th>
+                        <th scope="col">Množství</th>
+                        <th scope="col">Nákup</th>
+                        <th scope="col">Prodej</th>
+                    </tr>
+                    </thead>
+
+                    <tbody id="rates-body"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="detail-view" aria-labelledby="detail-title" hidden>
+            <button id="back-button" type="button">
+                Zpět na přehled
+            </button>
+
+            <h2 id="detail-title">Detail měny</h2>
+            <dl id="rate-detail"></dl>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
